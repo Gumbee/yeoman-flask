@@ -1,6 +1,6 @@
 from flask import render_template
-from <%= appName %> import app 
+from <%= appName %> import <%= appName %> 
 
-@app.route('/')
+@<%= appName %>.route('/')
 def index():
     return render_template('index.html')

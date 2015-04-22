@@ -1,3 +1,3 @@
-from <%= appName %> import app
+from <%= appName %> import <%= appName %>
 
-app.run(debug = True)
+<%= appName %>.run(debug = True)

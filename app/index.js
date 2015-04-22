@@ -144,6 +144,15 @@ Generator.prototype.createYeomanFiles = function createYeomanFiles() {
   this.copy('gitattributes', '.gitattributes')
 }
 
+// create the bower files
+Generator.prototype.createBowerFiles = function createBowerFiles() {
+  this.mkdir(this.appName + '/static/components')
+  this.template('bower.json', 'bower.json')
+  this.template('bowerrc', '.bowerrc')
+  this.directory('jquery', this.appName + '/static/components/jquery')
+}
+
+
 Generator.prototype.end = function end() {
   this.log.writeln('\nYour app is ready !\n')
 }
