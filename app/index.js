@@ -149,7 +149,6 @@ Generator.prototype.createBowerFiles = function createBowerFiles() {
   this.mkdir(this.appName + '/static/components')
   this.template('bower.json', 'bower.json')
   this.template('bowerrc', '.bowerrc')
-  this.directory('jquery', this.appName + '/static/components/jquery')
 }
 
 
