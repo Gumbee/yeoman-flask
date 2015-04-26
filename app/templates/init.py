@@ -8,8 +8,12 @@ import os
 
 # Function to easily find your assets
 # In your template use <link rel=stylesheet href="{{ static('filename') }}">
+# In your template use <link rel=stylesheet href="{{ bower('filename') }}"> for bower components
 <%= appName %>.jinja_env.globals['static'] = (
     lambda filename: url_for('static', filename = filename)
+)
+<%= appName %>.jinja_env.globals['bower'] = (
+    lambda filename: url_for('static', filename = "components/" + filename)
 )
 
 from <%= appName %> import views
